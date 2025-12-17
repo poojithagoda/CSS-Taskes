@@ -1,0 +1,83 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Navbar */
+.navbar{
+    background:#2f4f4f;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+}
+
+/* Logo */
+.logo{
+    color:white;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* Menu */
+.menu{
+    list-style:none;
+    display:flex;
+    gap:30px;
+}
+
+.menu li{
+    position:relative;
+}
+
+.menu a{
+    text-decoration:none;
+    color:white;
+    font-size:18px;
+    padding:8px 0;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover main menu */
+.menu a:hover{
+    color:#ffeb3b;
+    transform:scale(1.1);
+}
+
+/* Submenu */
+.submenu{
+    list-style:none;
+    position:absolute;
+    top:40px;
+    left:0;
+    background:white;
+    width:180px;
+    opacity:0;
+    visibility:hidden;
+    transform:translateY(15px);
+    transition:all 0.4s ease;
+    box-shadow:0 5px 15px rgba(0,0,0,0.2);
+}
+
+/* Show submenu */
+.menu li:hover .submenu{
+    opacity:1;
+    visibility:visible;
+    transform:translateY(0);
+}
+
+/* Submenu items */
+.submenu li a{
+    color:#333;
+    display:block;
+    padding:12px 15px;
+    transition:background 0.3s ease, padding-left 0.3s ease;
+}
+
+.submenu li a:hover{
+    background:#2f4f4f;
+    color:white;
+    padding-left:25px;
+}
